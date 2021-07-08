@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
 @app.route('/', methods= ['GET','POST'])
-def home():
+def index():
     if(request.method == 'GET'):
 
         data = "Hello World"
@@ -35,9 +35,9 @@ def potability_predict():
     pred_potability = model.predict(test_df)
     return jsonify({'Water Potability':str(pred_potability)})
 
-# Driver function
-if __name__ == '__main__':
-     app.run(debug=True)
+# # Driver function
+# if __name__ == '__main__':
+#      app.run(debug=True)
 
 
 
